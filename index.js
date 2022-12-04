@@ -11,38 +11,45 @@ const list = document.querySelectorAll('li');
 const expired = document.getElementById('time-up');
 const confirmationPage = document.getElementById('confirmation-page');
 
-form.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	checkout.style.display = 'block';
+	cancel()
 });
 
 closebtn.addEventListener('click', () => {
 	checkout.style.display = 'none';
+	cancel()
 });
 
 retryClose.addEventListener('click', () => {
 	expired.style.display = 'none';
 	countdown(1, 0);
+	cancel()
 });
 
 newClose.addEventListener('click', () => {
 	checkout.style.display = 'none';
 	payment.style.display = 'none';
+	cancel()
 });
 
 confirmClose.addEventListener('click', () => {
 	checkout.style.display = 'none';
 	payment.style.display = 'none';
 	confirmationPage.style.display = 'none';
+	cancel()
 });
 
 retry.addEventListener('click', () => {
 	document.getElementById('time-up').style.display = 'none';
 	countdown(1, 0);
+	cancel()
 });
 
 paymentBtn.addEventListener('click', () => {
 	document.getElementById('confirmation-page').style.display = 'block';
+	cancel()
 });
 
 const listItems = [...list];
@@ -53,6 +60,7 @@ listItems.forEach((item) => {
 		const coinTag = e.target.innerHTML;
 
 		countdown(1, 0);
+		
 
 		if (coinTag == 'Tether (USDT)') {
 			document.querySelector('.tag').innerHTML = 'USDT';
@@ -79,6 +87,8 @@ listItems.forEach((item) => {
 	});
 });
 
+let timer;
+
 function countdown(minutes, seconds) {
 	let element, endTime, hours, mins, msLeft, time;
 
@@ -100,7 +110,8 @@ function countdown(minutes, seconds) {
 				(hours ? hours + ':' + twoDigits(mins) : mins) +
 				':' +
 				twoDigits(time.getUTCSeconds());
-			setTimeout(updateTimer, time.getUTCMilliseconds() + 500);
+			timer = setTimeout(updateTimer, time.getUTCMilliseconds() + 500);
+			timer();
 		}
 	}
 
@@ -108,3 +119,7 @@ function countdown(minutes, seconds) {
 	endTime = +new Date() + 1000 * (60 * minutes + seconds) + 500;
 	updateTimer();
 }
+
+const cancel = () => {
+	clearTimeout(timer);
+};
