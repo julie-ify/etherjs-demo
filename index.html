@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="grid">
+				<h1>Human Hairs</h1>
+				<div>Price: $100</div>
+			</div>
+			<div>Pay with Crypto</div>
+
+			<form>
+				<div class="form-field">
+					<input placeholder="First Name" />
+					<input placeholder="Last Name" />
+				</div>
+				<input class="email" placeholder="Email" />
+				<div>
+					<button class="btn-primary" type="submit">Pay now</button>
+				</div>
+			</form>
+		</main>
+
+		<section id="checkout-page">
+			<div class="popup">
+				<span class="closebtn">X</span>
+				<div class="grid">
+					<h1>Human Hairs</h1>
+					<div>Price: $100</div>
+				</div>
+
+				<p>Select the coin you want to pay with:</p>
+
+				<div>
+					<ul>
+						<li>Tether (USDT)</li>
+						<li>Binance USD</li>
+						<li>USD Coin</li>
+						<li>Dai Stablecoin</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="payment">
+			<div class="popup">
+				<span class="close2">X</span>
+				<div class="grid">
+					<h1>Human Hairs</h1>
+					<div>Price: $100</div>
+				</div>
+
+				<p>Copy and paste the payment details to your wallet</p>
+				<div>Send payment within: <span class="timer">4:0</span></div>
+
+				<div>
+					<button class="btn-secondary">I've made the transfer</button>
+				</div>
+				<div class="grid">
+					<p>Amount to pay</p>
+					<div>100 <span class="tag"></span></div>
+				</div>
+				<hr />
+
+				<div><code>Address: 0x1Feef163b6fb90f515a681767</code></div>
+				<div><code class="code"></code></div>
+			</div>
+		</section>
+
+		<section id="time-up">
+			<div class="popup">
+				<span class="close3">X</span>
+				<div class="grid">
+					<h1>Human Hairs</h1>
+					<div>Price: $100</div>
+				</div>
+				<p>Time is up, payment was not detected for this transation</p>
+
+				<button class="retry">Try again</button>
+			</div>
+		</section>
+
+		<section id="confirmation-page">
+			<div class="popup">
+				<span class="close4">X</span>
+				<div class="grid">
+					<h1>Human Hairs</h1>
+					<div>Price: $100</div>
+				</div>
+
+				<svg
+					class="waiting-spinner"
+					width="72"
+					height="72"
+					viewBox="0 0 72 72"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M36 0C16.1498 0 0 16.1498 0 36C0 55.8502 16.1498 72 36 72C55.8502 72 72 55.8502 72 36C72 16.1498 55.8502 0 36 0ZM56.7692 31.526C56.7692 31.9216 56.612 32.3011 56.3323 32.5809C56.0525 32.8607 55.673 33.0179 55.2773 33.0179H44.9723C44.6771 33.0184 44.3885 32.9311 44.1429 32.7673C43.8974 32.6035 43.706 32.3705 43.5931 32.0977C43.4802 31.825 43.4508 31.5249 43.5087 31.2354C43.5666 30.946 43.7091 30.6802 43.9183 30.4719L47.7554 26.6348L46.7862 25.5081C45.0525 23.7083 42.8998 22.3661 40.5207 21.6016C38.1415 20.8371 35.6099 20.6741 33.1524 21.1271C30.6948 21.5802 28.3878 22.6351 26.4376 24.1977C24.4874 25.7603 22.9548 27.7817 21.9768 30.0814C20.9988 32.3811 20.6059 34.8873 20.8333 37.3759C21.0606 39.8645 21.9011 42.258 23.2796 44.3424C24.6581 46.4268 26.5316 48.1371 28.7327 49.3204C30.9337 50.5038 33.3937 51.1232 35.8927 51.1235C39.0202 51.1205 42.0701 50.15 44.6241 48.345C47.1781 46.5399 49.111 43.9889 50.1577 41.0417C50.2789 40.6985 50.4666 40.3826 50.71 40.1119C50.9534 39.8412 51.2477 39.6211 51.5761 39.4642C51.9045 39.3072 52.2606 39.2165 52.6241 39.1972C52.9876 39.1779 53.3513 39.2304 53.6945 39.3516C54.0377 39.4729 54.3537 39.6606 54.6244 39.9039C54.895 40.1473 55.1151 40.4416 55.2721 40.77C55.429 41.0984 55.5197 41.4546 55.539 41.8181C55.5583 42.1815 55.5059 42.5453 55.3846 42.8885C54.1224 46.4605 51.9026 49.6168 48.9677 52.0125C46.0329 54.4082 42.496 55.951 38.7435 56.4723C34.9911 56.9936 31.1675 56.4733 27.6908 54.9684C24.214 53.4635 21.2179 51.0318 19.0298 47.9391C16.8417 44.8464 15.5459 41.2117 15.2839 37.4323C15.022 33.6528 15.8041 29.8742 17.5446 26.5092C19.2851 23.1442 21.9172 20.3224 25.1531 18.3523C28.389 16.3821 32.1042 15.3394 35.8927 15.3381C38.6887 15.3274 41.4573 15.8893 44.0279 16.9891C46.5985 18.089 48.9166 19.7035 50.8396 21.7333L50.9365 21.8406L51.6825 22.706L54.2233 20.1652C54.3586 20.0268 54.5201 19.9166 54.6984 19.8411C54.8766 19.7657 55.0681 19.7264 55.2617 19.7256C55.4587 19.724 55.6541 19.7615 55.8365 19.8358C56.019 19.9102 56.1848 20.0201 56.3245 20.159C56.4642 20.2979 56.575 20.4631 56.6505 20.6451C56.7259 20.8271 56.7645 21.0222 56.764 21.2192L56.7692 31.526Z"
+						fill="#2B2B2B"
+					></path>
+				</svg>
+
+				<p>Confirming payment of <span class="amount"></span></p>
+				<p>
+					Your transaction is processing, please hold on for payment
+					confirmation.
+				</p>
+			</div>
+		</section>
+
+		<script src="index.js"></script>
+	</body>
+</html>
